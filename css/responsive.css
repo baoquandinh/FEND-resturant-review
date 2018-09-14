@@ -1,5 +1,40 @@
-@media screen and (min-width: 660px) {
-
-    /* ====================== Restaurant Details ====================== */
-    
+@media screen and (min-width: 395px) {
+   nav h1 a {
+       padding-left: 1%;
+   } 
 }
+
+@media screen and (min-width: 409px) {
+    nav {
+        height: 50px;
+    } 
+ }
+
+ @media screen and (min-width: 410px) {
+     .filter-options {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        justify-content: center;
+        padding-top: 2%;
+     }
+
+     .filter-options-dropdown {
+         flex: .4 auto;
+     }
+
+ }
+
+ @media screen and (min-width: 600px) {
+    .filter-options select {
+        font-size: 12pt;
+    }
+    .filter-options h2 {
+        font-size: 1 em;
+    }
+ }
+
+
+ 
