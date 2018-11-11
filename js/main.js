@@ -137,25 +137,44 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
  */
 createRestaurantHTML = (restaurant) => {
   const li = document.createElement('li');
+  
+  const imageContainer = document.createElement('div')
+  imageContainer.className = 'restaurant-img-container'
 
   const image = document.createElement('img');
   image.className = 'restaurant-img';
+  image.tabIndex = 0
+  image.alt = "image of " + restaurant.name;
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
-  li.append(image);
+
+  imageContainer.append(image)
+  li.append(imageContainer);
 
   const name = document.createElement('h1');
+  const nameContainer = document.createElement('div')
+  nameContainer.className = 'restaurant-name-container'
   name.innerHTML = restaurant.name;
-  li.append(name);
+  nameContainer.append(name);
+  li.append(nameContainer);
 
   const neighborhood = document.createElement('p');
+  const restaurantDetailContainer = document.createElement('div')
+  restaurantDetailContainer.className="restaurant-detail-container"
+
   neighborhood.innerHTML = restaurant.neighborhood;
-  li.append(neighborhood);
+  neighborhood.tabIndex = 0;
+  restaurantDetailContainer.append(neighborhood);
+  li.append(restaurantDetailContainer)
 
   const address = document.createElement('p');
   address.innerHTML = restaurant.address;
-  li.append(address);
+  address.tabIndex = 0;
+  restaurantDetailContainer.append(address);
+  li.append(restaurantDetailContainer)
+
 
   const more = document.createElement('a');
+  more.className = "restaurant-view-button"
   more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
   li.append(more)

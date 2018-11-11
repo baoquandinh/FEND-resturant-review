@@ -51,16 +51,21 @@ fetchRestaurantFromURL = (callback) => {
 fillRestaurantHTML = (restaurant = self.restaurant) => {
   const name = document.getElementById('restaurant-name');
   name.innerHTML = restaurant.name;
+  name.tabIndex = 0
 
   const address = document.getElementById('restaurant-address');
   address.innerHTML = restaurant.address;
+  address.tabIndex = 0
 
   const image = document.getElementById('restaurant-img');
   image.className = 'restaurant-img'
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
+  img.tabIndex = 0
+  img.alt = "restaurant image for " + restaurant.name
 
   const cuisine = document.getElementById('restaurant-cuisine');
   cuisine.innerHTML = restaurant.cuisine_type;
+  cuisine.tabIndex = 0;
 
   // fill operating hours
   if (restaurant.operating_hours) {
@@ -95,9 +100,12 @@ fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => 
  */
 fillReviewsHTML = (reviews = self.restaurant.reviews) => {
   const container = document.getElementById('reviews-container');
+  const reviewsTitleContainer = document.createElement('div');
   const title = document.createElement('h2');
+  reviewsTitleContainer.className = "reviews-title-container"
   title.innerHTML = 'Reviews';
-  container.appendChild(title);
+  reviewsTitleContainer.appendChild(title)
+  container.appendChild(reviewsTitleContainer);
 
   if (!reviews) {
     const noReviews = document.createElement('p');
@@ -119,6 +127,7 @@ createReviewHTML = (review) => {
   const li = document.createElement('li');
   const name = document.createElement('p');
   name.innerHTML = review.name;
+  li.tabIndex = 0;
   li.appendChild(name);
 
   const date = document.createElement('p');
