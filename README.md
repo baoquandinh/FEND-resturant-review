@@ -7,6 +7,7 @@ Taking a static design that lacks accessibility and convert the design to be res
 Python 2: python -m SimpleHTTPServer 8000 
 Python 3: python3 -m http.server 8000  
 Visit the site in your browser at http://localhost:8000  
+3. To test service worker, simply open up web debugger and turn off networking. Then refresh the page and images should still load.
 
 ## Contributing
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
