@@ -53,43 +53,21 @@
 /* Restaurant Details */
 @media screen and (min-width: 320px) {
 
-    .inside body, td, th, p {
-        font-size: 23pt;
-    }
-
     #reviews-container {
         padding-left: 5%;
         padding-right: 10%;
     }
-
-    #reviews-list li {
-        width: 100%;
-    }
-
-    .inside nav h1 a {
-        font-size: 24pt;
-    }
+    
     .inside #map {
         height: 50vh;
     }
 
-    .inside #restaurant-name {
-        font-size: 24pt;
-    }
     .restaurant-img-cuisine-container {
         width: 100%;
     }
 
     .inside .restaurant-detail-container {
         width: 100%;
-    }
-
-    #restaurant-cuisine, #restaurant-address {
-        font-size: 24pt;
-    }
-
-    .inside #footer {
-        font-size: 24pt;
     }
 }
 
@@ -98,9 +76,6 @@
         width: 50%;
     }
 
-    .inside body, td, th, p {
-        font-size: 15pt;
-    }
 
     #restaurant-img {
         height: 100%;
